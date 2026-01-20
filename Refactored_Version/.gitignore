@@ -1,0 +1,10 @@
+/target/
+/test-classes/
+*.class
+*.jar
+*.war
+
+.idea/
+.vscode/
+*.iml
+*.swp
