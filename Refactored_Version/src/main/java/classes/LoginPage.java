@@ -134,7 +134,7 @@ public class LoginPage extends JFrame {
             new CourseAdminPage(session).setVisible(true);
             System.out.println("successful login for admin");
         } else if (session.getUser().getRole().equals("AcademicOfficer")){
-            // new AcademicOfficerPage(user).setVisible(true);
+            new AcademicOfficerPage(session).setVisible(true);
             System.out.println("successfult login for academic officer");
         } else {
             System.out.println("Error: Role not found");

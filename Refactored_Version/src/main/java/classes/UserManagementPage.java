@@ -233,7 +233,6 @@ public class UserManagementPage extends JFrame {
             String firstName = firstNameField.getText();
             String lastName = lastNameField.getText();
             String email = emailField.getText();
-            String role = roleField.getSelectedItem().toString();
 
             // Check if all the fields are filled up
             if (username.isEmpty() || password.isEmpty() || firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {

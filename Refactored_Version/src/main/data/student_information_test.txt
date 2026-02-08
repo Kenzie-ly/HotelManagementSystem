@@ -1,6 +1,5 @@
 StudentID	FirstName	LastName	Major	Year	Semester	Email
-S001	Fiona	Smith	Computer Science	Senior	Semester 1	fiona.smith@university.edu
-S002	George	Wilson	Literature	Sophomore	Semester 1	george.wilson@university.edu
+S002	George	Wilson	Computer Science	Sophomore	Semester 1	george.wilso@university.edu
 S003	Ivan	Wilson	Mathematics	Senior	Semester 2	ivan.wilson@university.edu
 S004	Ivan	Chen	Philosophy	Senior	Semester 1	jintech674@gmail.com
 S005	Bob	Smith	Statistics	Sophomore	Semester 2	bob.smith@university.edu
@@ -20,3 +19,4 @@ S040	Quinn	Smith	Biology	Sophomore	Semester 2	quinn.smith@university.edu
 S043	Ivan	Chen	Economics	Junior	Semester 1	ivan.chen@university.edu
 S046	Ethan	Lee	Statistics	Junior	Semester 1	ethan.lee@university.edu
 S050	Ethan	Lee	Economics	Senior	Semester 2	ethan.lee@university.edu
+S001	Fiona	Smith	Computer Science	Senior	Semester 1	fiona.smith@university.edu

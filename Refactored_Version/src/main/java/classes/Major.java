@@ -17,4 +17,8 @@ public class Major {
     public String getMajorName(){
         return name;
     }
+
+    public void setMajorName(String name){
+        this.name = name;
+    }
 }

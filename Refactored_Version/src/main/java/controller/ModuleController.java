@@ -36,6 +36,10 @@ public class ModuleController {
         return EnrollmentRepository.getEnrolledStudents();
     }
 
+    public List<Enrollement> getEnrollementBySemOfStudent(Student s, String sem){
+        return EnrollmentRepository.getStudentEnrollmentsbySem(s, sem);        
+    }
+
     public List<Course> getAllCoursesTakenByFailedStudents(){
         List<Course> existedCourses = this.getCourseOfRecoveryPlans();
         Set<String> existedCourseIds = existedCourses.stream()
@@ -64,6 +68,15 @@ public class ModuleController {
     public double calcStudentCGPA(Student student){
         double grades = 0;
         for(var enrollement :EnrollmentRepository.getStudentEnrollments(student)){
+            grades = grades + points.get(enrollement.getGrade());
+        }
+
+        return grades/(RequirementRepository.findRequirement(student.getMajor(), student.getYear(), student.getSem())).getRequiredCourseCount();
+    }
+
+    public double calcStudentGPA(Student student, String sem){
+        double grades = 0;
+        for(var enrollement :EnrollmentRepository.getStudentEnrollmentsbySem(student, sem)){
             grades = grades + points.get(enrollement.getGrade());
         }
 

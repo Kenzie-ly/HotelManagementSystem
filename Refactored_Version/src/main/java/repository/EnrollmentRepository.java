@@ -89,6 +89,26 @@ public class EnrollmentRepository {
         return enrollements;
     }
 
+    public static List<Enrollement> getStudentEnrollmentsbySem(Student student, String sem){
+        List<Enrollement> enrollements = new ArrayList<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader(ResourceManager.getGradeDataPath()))) {
+            reader.readLine(); // skip header
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] value = line.split("\t");
+
+                Course course = CourseRepository.findCoursesByID(value[2]);
+
+                if(student.getStudentID().equals(value[1]) && course.getSemester().equalsIgnoreCase(sem)){
+                    enrollements.add(new Enrollement(value[0], student, course, value[3]));
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return enrollements;
+    }
+
     public static List<Enrollement> findGradeBasedOnCourse(Course course){
         List<Enrollement> enrollements = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(ResourceManager.getGradeDataPath()))) {

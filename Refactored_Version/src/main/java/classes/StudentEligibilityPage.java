@@ -111,7 +111,7 @@ public class StudentEligibilityPage extends JFrame {
         if (role.equals("Admin")) {
             new CourseAdminPage(session).setVisible(true);
         } else if (role.equals("AcademicOfficer")) {
-            // new AcademicOfficerPage(session).setVisible(true);
+            new AcademicOfficerPage(session).setVisible(true);
         }
     }
 
